@@ -1,4 +1,5 @@
 # Homoglyph Domain Searcher
+Search for domain name lookalikes using homoglyphs.
 
 ### Requirements
     Python 3.10+
