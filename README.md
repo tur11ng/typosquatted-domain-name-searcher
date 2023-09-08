@@ -3,7 +3,7 @@ Search for domain name lookalikes using homoglyphs.
 
 ### Requirements
     Python 3.10+
-    Nmap   7.94+
+    Nmap   7.94+ (other versions will probably work too.)
 
 ### Installation
 ```
