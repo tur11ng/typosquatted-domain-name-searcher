@@ -13,7 +13,12 @@ virtualenv ./venv
 chmod u+x ./venv/bin/activate
 source ./venv/bin/activate
 pip install -r requirements.txt
-python3 main.py example.com
+```
+
+### Execution
+```
+python3 main.py example.com Android
+python3 main.py -h
 ```
 
 ### Functionality
