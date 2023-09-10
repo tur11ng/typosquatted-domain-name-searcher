@@ -3,3 +3,8 @@ venv/
 .vscode/
 .idea/
 
+/assets/fonts/default/
+/assets/fonts/roboto/
+/assets/fonts/segoe-ui/
+/assets/fonts/sf-pro/
+/assets/fonts/ubuntu/

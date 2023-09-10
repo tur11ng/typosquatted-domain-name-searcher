@@ -3,6 +3,7 @@ from pathlib import Path
 
 
 class OperatingSystem(Enum):
+    Default = auto()
     Android = auto()
     iOS = auto()
     Windows = auto()
@@ -14,9 +15,11 @@ class Utils:
     def get_font_path(operating_system: OperatingSystem) -> Path:
         current_directory = Path.cwd()
 
+        # return current_directory / 'assets' / 'fonts' / 'default' / 'JetBrainsMono-Regular.ttf'
+
         match operating_system:
             case OperatingSystem.iOS:
-                return current_directory / 'assets' / 'fonts' / 'sf-pro' / 'SF-Pro-Text-Regular.ttf'
+                return current_directory / 'assets' / 'fonts' / 'sf-pro' / 'SF-Pro-Text-Regular.otf'
             case OperatingSystem.Android:
                 return current_directory / 'assets' / 'fonts' / 'roboto' / 'Roboto-Regular.ttf'
             case OperatingSystem.Windows:

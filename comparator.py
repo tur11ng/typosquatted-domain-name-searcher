@@ -23,6 +23,7 @@ class Comparator:
         draw = ImageDraw.Draw(image)
         font = ImageFont.truetype(str(Utils.get_font_path(operating_system)), 15)
         draw.text((10, 10), text, font=font, fill=(255, 255, 0))
+        image.show()
 
         return image
 
