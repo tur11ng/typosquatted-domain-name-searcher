@@ -1,9 +1,9 @@
 from io import BytesIO
 
-import cv2
+from PIL import Image
+from skimage.metrics import structural_similarity as ssim
+from skimage.color import rgb2gray
 import numpy as np
-from skimage.metrics import structural_similarity
-from PIL import Image, ImageDraw, ImageFont
 
 from renderer import Renderer
 
@@ -12,10 +12,10 @@ class Comparator:
 
     @staticmethod
     def _compare_images(image_a: Image, image_b: Image):
-        image_a_gray = cv2.cvtColor(np.array(image_a), cv2.COLOR_RGB2GRAY)
-        image_b_gray = cv2.cvtColor(np.array(image_b), cv2.COLOR_RGB2GRAY)
+        image_a_gray = rgb2gray(np.array(image_a))
+        image_b_gray = rgb2gray(np.array(image_b))
 
-        (score, diff) = structural_similarity(image_a_gray, image_b_gray, full=True)
+        (score, diff) = ssim(image_a_gray, image_b_gray, full=True)
 
         return score
 
