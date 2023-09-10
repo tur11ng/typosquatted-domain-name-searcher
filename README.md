@@ -21,7 +21,10 @@ pip install -r requirements.txt
 
 ### Execution
 ```
-python3 main.py example.com Android
+python3 main.py example.com --filter HIGH
+```
+
+```
 python3 main.py -h
 ```
 
