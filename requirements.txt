@@ -7,7 +7,7 @@ requests==2.31.0
 urllib3==2.0.4
 validators==0.22.0
 whois==0.9.27
-opencv-python==4.8.0.76
 scikit-image==0.21.0
 numpy==1.25.2
 Pillow==10.0.0
+pyppeteer==1.0.2
