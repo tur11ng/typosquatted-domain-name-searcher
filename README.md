@@ -13,7 +13,12 @@ virtualenv ./venv
 chmod u+x ./venv/bin/activate
 source ./venv/bin/activate
 pip install -r requirements.txt
-python3 main.py example.com
+```
+
+### Execution
+```
+python3 main.py example.com Android
+python3 main.py -h
 ```
 
 ### Functionality
@@ -27,3 +32,5 @@ We apply some heuristics to check if a domain is registered using the following 
 2. Check if a WHOIS lookup succeeds.
 3. Check if the top 10 common ports are open.
 4. Check if it responds to HTTP/HTTPS requests. (This is redundant and will be removed.)
+
+If a domain name is found unregistered, we then evaluate it's visual similarity with the original one using the SSIM index. 
