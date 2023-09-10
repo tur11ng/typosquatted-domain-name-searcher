@@ -1,5 +1,5 @@
 # Homoglyph Domain Searcher
-Search for domain name lookalikes using homoglyphs.
+Search for unregistered typosquatted domain names that use homoglyphs and then filter based on the similarity with the original domain name using computer vision.
 
 <p align="center">
 <img src="https://github.com/tur11ng/typosquatted-domain-name-searcher/assets/61602820/5022c404-b387-4ff1-9fd5-d3a25221ee5a" width="700" />
