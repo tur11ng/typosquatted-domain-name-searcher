@@ -3,6 +3,7 @@ from io import BytesIO
 from PIL import Image
 from skimage.metrics import structural_similarity as ssim
 from skimage.color import rgb2gray
+from skimage.transform import resize
 import numpy as np
 
 from renderer import Renderer
@@ -12,10 +13,16 @@ class Comparator:
 
     @staticmethod
     def _compare_images(image_a: Image, image_b: Image):
-        image_a_gray = rgb2gray(np.array(image_a))
-        image_b_gray = rgb2gray(np.array(image_b))
+        image_a_gray = rgb2gray(np.array(image_a.convert("RGB")))
+        image_b_gray = rgb2gray(np.array(image_b.convert("RGB")))
 
-        (score, diff) = ssim(image_a_gray, image_b_gray, full=True)
+        h_max = max(image_a_gray.shape[0], image_b_gray.shape[0])
+        w_max = max(image_a_gray.shape[1], image_b_gray.shape[1])
+
+        image_a_gray = resize(image_a_gray, (h_max, w_max))
+        image_b_gray = resize(image_b_gray, (h_max, w_max))
+
+        (score, diff) = ssim(image_a_gray, image_b_gray, full=True, data_range=1.0)
 
         return score
 

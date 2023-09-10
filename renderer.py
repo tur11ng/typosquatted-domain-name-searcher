@@ -11,7 +11,6 @@ class Renderer:
             Renderer._page = await browser.newPage()
 
         content = f"""
-        data:text/html,
         <html>
         <head>
             <style>
@@ -26,5 +25,7 @@ class Renderer:
         </body>
         </html>
         """
-        element = await Renderer._page.JJ('a')
+
+        await Renderer._page.setContent(content)
+        element = await Renderer._page.querySelectorAll('a')
         return await element[0].screenshot()

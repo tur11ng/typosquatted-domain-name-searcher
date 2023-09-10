@@ -23,10 +23,10 @@ async def main():
         )
 
     if evaluate:
-        async for domain_name in Searcher.search_unregistered_typosquatted_domain_names(domain_name, evaluate):
-            print(domain_name)
+        async for domain_name, score in Searcher.search_unregistered_typosquatted_domain_names(domain_name, evaluate):
+            print(f"{domain_name} : {score}")
     else:
-        async for domain_name in Searcher.search_unregistered_typosquatted_domain_names(domain_name):
+        async for domain_name, score in Searcher.search_unregistered_typosquatted_domain_names(domain_name, evaluate):
             print(domain_name)
 
 
