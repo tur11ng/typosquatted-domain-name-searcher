@@ -1,5 +1,5 @@
-# Homoglyph Domain Searcher
-Search for unregistered typosquatted domain names that use homoglyphs and then filter based on the similarity with the original domain name using computer vision.
+# Typosquatted Domain Name Searcher
+Search for unregistered typosquatted domain names using homoglyphs and then filter based on the similarity with the original domain name using computer vision.
 
 <p align="center">
 <img src="https://github.com/tur11ng/typosquatted-domain-name-searcher/assets/61602820/5022c404-b387-4ff1-9fd5-d3a25221ee5a" width="700" />
@@ -11,8 +11,8 @@ Search for unregistered typosquatted domain names that use homoglyphs and then f
 
 ### Installation
 ```
-git clone https://github.com/tur11ng/homoglyph-domain-searcher
-cd homoglyph-domain-searcher
+git clone https://github.com/tur11ng/typosquatted-domain-name-searcher
+cd typosquatted-domain-name-searcher
 virtualenv ./venv
 chmod u+x ./venv/bin/activate
 source ./venv/bin/activate
