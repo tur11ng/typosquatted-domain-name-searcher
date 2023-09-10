@@ -1,6 +1,10 @@
 # Homoglyph Domain Searcher
 Search for domain name lookalikes using homoglyphs.
 
+<p align="center">
+<img src="https://github.com/tur11ng/typosquatted-domain-name-searcher/assets/61602820/5022c404-b387-4ff1-9fd5-d3a25221ee5a" width="700" />
+</p>
+
 ### Requirements
     Python 3.10+
     Nmap   7.94+ (other versions will probably work too.)
