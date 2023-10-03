@@ -19,7 +19,7 @@ scikit-image==0.21.0
 scipy==1.11.2
 tifffile==2023.8.30
 tqdm==4.66.1
-urllib3==2.0.4
+urllib3==2.0.6
 validators==0.22.0
 websockets==10.4
 whois==0.9.27
